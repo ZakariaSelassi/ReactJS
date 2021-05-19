@@ -3,6 +3,10 @@ import Comment from './UsersComponents/Comment'
 import Clock  from './ClockComponents/Clock'
 import Toggle from './ToggleComponent/Toggle'
 import Garage from './propsComponents/Garage';
+import Greeting from './conditionnelComp/Greeting';
+import LoginControl from './conditionnelComp/LoginControl'
+import Mails from './MailsComponents/Mails';
+import Pages from './pageComponents/Pages';
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -11,7 +15,7 @@ const comment = {
     avatarUrl: 'https://placekitten.com/g/64/64',
   },
 };
-
+const messages = ['React', 'Re: React', 'Re:Re: React'];
 class App extends Component {
   render()
   {
@@ -24,6 +28,9 @@ class App extends Component {
           <Clock />
           <Toggle/>
           <Garage/>
+          <Mails unreadMessages={messages} />
+          <LoginControl/>
+          <Pages/>
       </div>
     );
   }
