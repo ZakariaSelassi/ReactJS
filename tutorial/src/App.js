@@ -7,6 +7,9 @@ import Greeting from './conditionnelComp/Greeting';
 import LoginControl from './conditionnelComp/LoginControl'
 import Mails from './MailsComponents/Mails';
 import Pages from './pageComponents/Pages';
+import NumberList from './ListComponents/NumberList';
+import Form from './Form/Form';
+import Calculator from './CalculatorComponents/Calculator';
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -19,23 +22,28 @@ const messages = ['React', 'Re: React', 'Re:Re: React'];
 class App extends Component {
   render()
   {
+
     return (
       <div>
+        <Calculator/>
+        <Form/>
+        <NumberList/>
         <Comment 
            date={comment.date}
            text={comment.text}
            author={comment.author}/>
-          <Clock />
-          <Toggle/>
-          <Garage/>
-          <Mails unreadMessages={messages} />
-          <LoginControl/>
-          <Pages/>
+
       </div>
     );
   }
   
 }
 
+/*          <Clock />
+          <Toggle/>
+          <Garage/>
+          <Mails unreadMessages={messages} />
+          <LoginControl/>
+          <Pages/> */
 
 export default App;
